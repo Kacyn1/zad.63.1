@@ -40,13 +40,13 @@ bool okej(string x){
 int main()
 {
    string s;
-   klasa y;
-   klasa2 z;
+   klasa z;
+   klasa2 p;
 
-   while(!y.plik1.eof()){
-   	y.plik1>>s;
+   while(!z.plik1.eof()){
+   	z.plik1>>s;
 
-    	if(z.okej(s)){
+    	if(p.okej(s)){
         	cout<<s<<endl;
    	}
    }
