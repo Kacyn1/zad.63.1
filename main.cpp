@@ -1,15 +1,16 @@
 #include <iostream>
 #include <fstream>
+#include <string>
 
 using namespace std;
 
 class cos_klasa{
     public:
-ifstream plik1;
-klasa();
+	ifstream plik1;
+	klasa();
 };
 klasa::klasa(){
-plik1.open("ciagi.txt");
+	plik1.open("ciagi.txt");
 }
 
 class klasa_druga{
