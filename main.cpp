@@ -12,7 +12,7 @@ klasa::klasa(){
 plik1.open("ciagi.txt");
 }
 
-class klasa2{
+class klasa_druga{
 
 public:
 
@@ -41,7 +41,7 @@ int main()
 {
    string s;
    klasa z;
-   klasa2 p;
+   klasa_druga p;
 
    while(!z.plik1.eof()){
    	z.plik1>>s;
