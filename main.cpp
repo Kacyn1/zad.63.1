@@ -3,7 +3,7 @@
 
 using namespace std;
 
-class cos{
+class cos_klasa{
     public:
 ifstream plik1;
 klasa();
@@ -40,7 +40,7 @@ bool okej(string x){
 int main()
 {
    string s;
-   cos z;
+   cos_klasa z;
    klasa_druga p;
 
    while(!z.plik1.eof()){
