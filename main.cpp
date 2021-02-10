@@ -1,68 +1,54 @@
-  
 #include <iostream>
 #include <fstream>
-#include <string>
+
 using namespace std;
 
-class file {
-	public:
-		ifstream fIn;
-		
-	
-		file();
-		~file();
-			
+class klasa{
+    public:
+ifstream plik1;
+klasa();
 };
-
-file::file(){
-	fIn.open("c:\\ciagi.txt");
+klasa::klasa(){
+plik1.open("ciagi.txt");
 }
 
-file::~file(){
-	fIn.close();
-}
+class klasa2{
 
-class String {
-	
-	public:
-		
-		bool compareHalfs(string squence);
-		
-			
-		
+public:
+
+bool okej(string x){
+	string a,b;
+
+        	if(x.length()%2==1){
+           		 return false;
+        	}
+        	for(int i=0;i<x.length()/2;i++){
+           		 a = a + x[i];
+        	}
+       		for(int i=x.length()/2;i<x.length();i++)
+       		{
+          		 b = b+ x[i];
+       		}
+       		for(int i=0;i<x.length()/2;i++){
+      	  		if(a[i] != b[i]){
+            	return false;
+        	}
+       }
+    return true;
+    }
 };
+int main()
+{
+   string s;
+   klasa y;
+   klasa2 z;
 
-bool String::compareHalfs(string sequence){
-	string h1, h2;
-	if(sequence.length()%2 == 1){
+   while(!y.plik1.eof()){
+   	y.plik1>>s;
 
-		return false;
-	}
-	for(int i = 0; i<sequence.length()/2;i++){
-		h1 += sequence[i];
-	}
-	for(int i = sequence.length()/2; i<sequence.length(); i++){
-		h2 += sequence[i];
-	}
-	for(int i = 0; i<h1.length();i++){
-		if(h1[i] != h2[i]){
-			return false;
-		}
-	}
-	return true;
-	
-}
-int main(int argc, char** argv) {
-	String s;
-	file f;
-	string temp;
-	while(!f.fIn.eof()){
-		f.fIn>>temp;
-		if(s.compareHalfs(temp)){
-			cout<<temp<<endl;
-		}
-		
-	}
-	
-	return 0;
+    	if(z.okej(s)){
+        	cout<<s<<endl;
+   	}
+   }
+    return 0;
 }
